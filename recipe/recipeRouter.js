@@ -24,17 +24,5 @@ router.get("/:id/shoppingList", async (req, res, next) => {
 	}
 })
 
-// to get instructions of a specific recipe
-router.get("/:id/shoppingList", async (req, res, next) => {
-	try {
-		const ingredients = await db.getShoppingList(req.params.id)
-		res.json(ingredients)
-	} catch (err) {
-		next(err)
-	}
-})
-
-
-
 
 module.exports = router
