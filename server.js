@@ -1,14 +1,14 @@
 const express = require("express");
 const helmet = require("helmet")
 const recipeRouter = require("./recipe/recipeRouter");
-const stepsRouter = require("./instructions/instructionsRouter")
+const ingredientsRouter = require("./instructions/instructionsRouter")
 const server = express();
 
 server.use(helmet())
 server.use(express.json());
 
 server.use("/api/recipes", recipeRouter);
-server.use("/api/steps", stepsRouter);
+server.use("/api/ingredients", ingredientsRouter);
 
 server.use((err, req, res, next) => {
   console.log(err);

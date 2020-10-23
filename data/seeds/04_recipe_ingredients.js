@@ -6,5 +6,7 @@ exports.seed = async function(knex) {
     { recipes_id: 3, ingredients_id: 3, quantity: 1 },
     { recipes_id: 1, ingredients_id: 2, quantity: 3 },
     { recipes_id: 1, ingredients_id: 3, quantity: 1 },
+    { recipes_id: 3, ingredients_id: 4, quantity: 5 },
+    { recipes_id: 3, ingredients_id: 2, quantity: 2 },
 	])
 }

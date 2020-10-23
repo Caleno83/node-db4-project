@@ -6,9 +6,9 @@ const router = express.Router()
 
 
 // to get instructions of a specific recipe
-router.get("/:id", async (req, res, next) => {
+router.get("/:id/recipes", async (req, res, next) => {
 	try {
-		const ingredients = await db.getInstructions(req.params.id)
+		const ingredients = await db.getInstructionsRecipe(req.params.id)
 		res.json(ingredients)
 	} catch (err) {
 		next(err)
